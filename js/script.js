@@ -27,5 +27,29 @@ menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
 document.querySelector('.menu').appendChild(menuToggle);
 
 menuToggle.addEventListener('click', () => {
-    document.querySelector('.menu ul').classList.toggle('active');
+    const menuList = document.querySelector('.menu ul');
+    menuList.classList.toggle('active');
+    
+    // Toggle icon
+    const icon = menuToggle.querySelector('i');
+    if (menuList.classList.contains('active')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+    } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    const menu = document.querySelector('.menu');
+    const menuList = document.querySelector('.menu ul');
+    
+    if (!menu.contains(e.target) && menuList.classList.contains('active')) {
+        menuList.classList.remove('active');
+        const icon = menuToggle.querySelector('i');
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+    }
 });
