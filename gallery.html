@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - Lớp học của chúng tôi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <script src="js/gallery.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="logo">LỚP 12A7</div>
+        <ul>
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="members.html">Thành viên</a></li>
+            <li><a href="activities.html">Hoạt động</a></li>
+            <li><a href="gallery.html" class="active">Thư viện ảnh</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <main class="gallery-container">
+        <div class="gallery-header">
+            <h1>Kỷ Yếu Lớp 12A7</h1>
+            <p>Album kỷ niệm của chúng mình</p>
+        </div>
+        
+        <div class="gallery-wrapper">
+            <div class="photo-grid">
+                <!-- Class Photos -->
+                <div class="photo-item class" data-category="class">
+                    <div class="photo-content">
+                        <img src="images/gallery/class01.jpg" alt="Lớp học buổi sáng">
+                        <div class="photo-info">
+                            <h3>Buổi sáng đầu tiên</h3>
+                            <span>05/09/2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Activities Photos -->
+                <div class="photo-item activities" data-category="activities">
+                    <div class="photo-content">
+                        <img src="images/gallery/act01.jpg" alt="Hoạt động ngoại khóa">
+                        <div class="photo-info">
+                            <h3>Dã ngoại Đầm Sen</h3>
+                            <span>15/10/2023</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Friends Photos -->
+                <div class="photo-item friends" data-category="friends">
+                    <div class="photo-content">
+                        <img src="images/gallery/friend01.jpg" alt="Nhóm bạn">
+                        <div class="photo-info">
+                            <h3>Nhóm học Toán</h3>
+                            <span>20/11/2023</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Full Screen Preview -->
+        <div class="preview-modal">
+            <span class="close-preview">&times;</span>
+            <img src="" alt="Preview" id="preview-image">
+            <button class="nav-btn prev-btn">&lt;</button>
+            <button class="nav-btn next-btn">&gt;</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nguyễn Lê Anh Thư lớp 12A7. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
